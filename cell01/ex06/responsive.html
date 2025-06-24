@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        /* Reset the default margin and padding for body */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5; /* Light background color */
+        }
+
+        /* Styling for the table */
+        table {
+            width: 100%; /* Table takes up the full width of the page */
+            height: 100%; /* Table takes up the full height of the page */
+            table-layout: auto; /* Allows the table to adjust dynamically */
+            border-collapse: collapse; /* Remove spacing between cells */
+            max-width: 100%; /* Ensure the table doesn't stretch beyond the viewport */
+        }
+
+        /* Styling for table cells */
+        td {
+            border: 1px solid black; /* Border around the cells */
+            padding: 20px; /* Add space inside cells */
+            text-align: center; /* Center the text inside cells */
+            background-color: lightgreen; /* Default background color */
+        }
+
+        /* Add color to the second cell */
+        td:nth-child(2) {
+            background-color: lightpink;
+        }
+
+        /* Make sure table is responsive on small screens */
+        @media (max-width: 600px) {
+            table {
+                width: 90%; /* Slightly reduce table width for smaller screens */
+            }
+
+            td {
+                padding: 15px; /* Less padding on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Table -->
+    <table>
+        <tr>
+            <td>First Cell</td>
+            <td>Second Cell</td>
+        </tr>
+    </table>
+
+</body>
+</html>
