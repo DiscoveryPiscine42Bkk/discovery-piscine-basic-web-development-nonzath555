@@ -1,0 +1,61 @@
+/* Basic reset and layout */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #f0f0f0; /* Light background color */
+}
+
+/* Styling for the table */
+table {
+    width: 90%; /* Table width is initially 90% of the screen */
+    height: 80%; /* Table takes up 80% of the viewport height */
+    border-collapse: collapse; /* Remove spacing between cells */
+    table-layout: fixed; /* Ensure columns adjust based on content */
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+/* Styling for table cells */
+td {
+    border: 1px solid black; /* Border around the cells */
+    padding: 20px; /* Add some space inside cells */
+    text-align: center; /* Center the text inside cells */
+}
+
+/* Add color to the first and second cells */
+td:first-child {
+    background-color: lightgreen; /* First cell background */
+}
+
+td:last-child {
+    background-color: lightpink; /* Second cell background */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    table {
+        width: 100%; /* Table takes up full width on smaller screens */
+        height: auto; /* Allow the table height to adjust */
+    }
+
+    td {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 1.2em; /* Reduce font size */
+    }
+}
+
+/* For very small screens (below 400px), stack the table content */
+@media (max-width: 400px) {
+    table {
+        width: 100%; /* Table takes full width */
+        height: auto; /* Adjust height based on content */
+    }
+
+    td {
+        font-size: 1em; /* Even smaller font size */
+        padding: 8px; /* Less padding */
+    }
+}
