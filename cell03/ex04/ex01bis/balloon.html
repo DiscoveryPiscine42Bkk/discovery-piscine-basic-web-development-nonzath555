@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Balloon</title>
+    <!-- Load Tailwind CSS for utility classes. While custom CSS is used, Tailwind helps with basic layout. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for the balloon and page layout */
+        body {
+            /* Use Inter font for a modern look */
+            font-family: 'Inter', sans-serif;
+            /* Flexbox to center the balloon on the page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Ensure the body takes full viewport height */
+            min-height: 100vh;
+            /* Light gray background for the page */
+            background-color: #f0f0f0;
+            /* No overflow, especially important for responsiveness */
+            overflow: hidden;
+        }
+
+        #balloon {
+            /* Initial size of the balloon */
+            width: 200px;
+            height: 200px;
+            /* Initial background color */
+            background-color: red;
+            /* Make it a perfect circle */
+            border-radius: 50%;
+            /* Add a subtle shadow for depth */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Smooth transitions for size and background color changes */
+            transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            /* Cursor changes to a pointer when hovering over the balloon */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-300">
+    <!-- The div element that represents our balloon -->
+    <div id="balloon"></div>
+
+    <script>
+        // Get a reference to the balloon element by its ID
+        const balloon = document.getElementById('balloon');
+
+        // Define the sequence of colors for the balloon
+        const colors = ['red', 'green', 'blue'];
+        // Keep track of the current color's index in the 'colors' array
+        let currentColorIndex = 0;
+        // Store the current size of the balloon (width and height are always equal)
+        let currentSize = 200; // Initial size
+
+        // --- Event Listener for Click ---
+        // When the balloon is clicked, this function executes
+        balloon.addEventListener('click', () => {
+            // Increase the balloon's size by 10px
+            currentSize += 10;
+
+            // Check if the balloon has "exploded" (exceeded 420px)
+            if (currentSize > 420) {
+                // If it explodes, reset size to original and color to red
+                currentSize = 200;
+                currentColorIndex = 0; // Reset to red
+            } else {
+                // If it hasn't exploded, cycle to the next color in sequence
+                // Uses modulo operator to loop back to the start of the 'colors' array
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+            }
+
+            // Apply the new size and color to the balloon's style
+            balloon.style.width = `${currentSize}px`;
+            balloon.style.height = `${currentSize}px`;
+            balloon.style.backgroundColor = colors[currentColorIndex];
+        });
+
+        // --- Event Listener for Mouse Out (mouse leaving the balloon) ---
+        // When the mouse pointer leaves the balloon, this function executes
+        balloon.addEventListener('mouseout', () => {
+            // Decrease the balloon's size by 5px
+            currentSize -= 5;
+
+            // Ensure the balloon does not shrink below its original size (200px)
+            if (currentSize < 200) {
+                currentSize = 200;
+            }
+
+            // Cycle to the previous color in reverse order
+            // If at the first color (red), loop back to the last color (blue)
+            currentColorIndex = (currentColorIndex - 1 + colors.length) % colors.length;
+
+            // Apply the new size and color to the balloon's style
+            balloon.style.width = `${currentSize}px`;
+            balloon.style.height = `${currentSize}px`;
+            balloon.style.backgroundColor = colors[currentColorIndex];
+        });
+
+        // Set initial state on load to ensure consistency, though already set by CSS/HTML
+        document.addEventListener('DOMContentLoaded', () => {
+            balloon.style.width = `${currentSize}px`;
+            balloon.style.height = `${currentSize}px`;
+            balloon.style.backgroundColor = colors[currentColorIndex];
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* backgroound.css */
+
+/*
+  This CSS file provides basic styling for the body and the button.
+  Tailwind CSS classes are primarily used for layout and appearance in the HTML,
+  but this file can be used for any additional custom styles not covered by Tailwind.
+*/
+
+body {
+    /* Ensure the body takes at least the full height of the viewport */
+    min-height: 100vh;
+    /* Apply a smooth transition for background color changes */
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* You can add more custom styles here if needed,
+   but for this simple task, Tailwind classes suffice for most styling. */
