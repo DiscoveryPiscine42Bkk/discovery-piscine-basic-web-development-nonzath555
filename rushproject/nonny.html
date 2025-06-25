@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio - Projects & Contact</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        section {
+            scroll-margin-top: 5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 shadow-lg z-50 p-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold rounded-md px-3 py-2 transition duration-300 hover:bg-blue-700">Your Name</a>
+            <div class="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="text-white hover:text-blue-200 transition duration-300 px-3 py-2 rounded-md hover:bg-blue-700">Home</a>
+                <a href="cv1.html" class="text-white hover:text-blue-200 transition duration-300 px-3 py-2 rounded-md hover:bg-blue-700">CV - Part 1</a>
+                <a href="cv2.html" class="text-white hover:text-blue-200 transition duration-300 px-3 py-2 rounded-md hover:bg-blue-700">CV - Part 2</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-16 px-4 md:px-8 shadow-inner mt-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200 transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x250/A78BFA/FFFFFF?text=Project+1" alt="Project 1 Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-700 mb-4">A full-stack e-commerce application built with React, Node.js, and MongoDB, featuring user authentication, product listings, and a shopping cart.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                            <span class="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                            <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center group">
+                            View Project
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200 transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x250/60A5FA/FFFFFF?text=Project+2" alt="Project 2 Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Portfolio Template</h3>
+                        <p class="text-gray-700 mb-4">A sleek, responsive portfolio template designed with HTML, CSS (Tailwind CSS), and a touch of JavaScript for animations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-200 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                            <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center group">
+                            View Project
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200 transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x250/9CA3AF/FFFFFF?text=Project+3" alt="Project 3 Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Task Management App</h3>
+                        <p class="text-gray-700 mb-4">A simple task management application with drag-and-drop functionality and local storage persistence.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Vue.js</span>
+                            <span class="bg-teal-200 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML/CSS</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center group">
+                            View Project
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-16 px-4 md:px-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Get In Touch</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                Feel free to connect with me on social media or send me an email. I'm always open to new opportunities and collaborations!
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- GitHub -->
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-800 text-white py-3 px-6 rounded-full shadow-lg hover:bg-gray-900 transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.165 6.839 9.48.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.341-3.369-1.341-.454-1.156-1.11-1.463-1.11-1.463-.907-.618.069-.606.069-.606 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.829.092-.644.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.945 0-1.09.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.651 0 0 .84-.269 2.75 1.025.798-.222 1.635-.333 2.47-.337.835.004 1.672.115 2.47.337 1.91-1.294 2.75-1.025 2.75-1.025.546 1.381.202 2.398.099 2.651.64.698 1.028 1.592 1.028 2.682 0 3.843-2.339 4.686-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.482C21.137 20.141 24 16.419 24 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    GitHub
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="flex items-center bg-blue-700 text-white py-3 px-6 rounded-full shadow-lg hover:bg-blue-800 transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-7.982v16h7.982v-8.75c0-4.017 4.71-3.785 4.71 0v8.75h5v-10.748c0-5.806-4.996-5.467-6.239-2.812l-.011-.002z"/></svg>
+                    LinkedIn
+                </a>
+
+                <!-- Instagram (Example) -->
+                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="flex items-center bg-pink-600 text-white py-3 px-6 rounded-full shadow-lg hover:bg-pink-700 transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056.815.039 1.474.175 1.99.37.525.205.953.475 1.384.906s.701.859.906 1.384c.195.516.331 1.175.37 1.99.043.93.056 1.285.056 3.715s-.013 2.784-.056 3.715c-.039.815-.175 1.474-.37 1.99-.205.525-.475.953-.906 1.384s-.859.701-1.384.906c-.516.195-1.175.331-1.99.37-.93.043-1.285.056-3.715.056s-2.784-.013-3.715-.056c-.815-.039-1.474-.175-1.99-.37-.525-.205-.953-.475-1.384-.906s-.701-.859-.906-1.384c-.195-.516-.331-1.175-.37-1.99-.043-.93-.056-1.285-.056-3.715s.013-2.784.056-3.715c.039-.815.175-1.474.37-1.99.205-.525.475-.953.906-1.384s.859-.701 1.384-.906c.516-.195 1.175-.331 1.99-.37.93-.043 1.285-.056 3.715-.056zM12 7.747a4.253 4.253 0 100 8.506 4.253 4.253 0 000-8.506zm0 6.947a2.694 2.694 0 110-5.388 2.694 2.694 0 010 5.388zm5.953-7.531a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" /></svg>
+                    Instagram
+                </a>
+
+                <!-- Email Link -->
+                <a href="mailto:your.email@example.com" class="flex items-center bg-teal-600 text-white py-3 px-6 rounded-full shadow-lg hover:bg-teal-700 transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.05 3.197L11.53 12.7c.36.29.87.29 1.23 0L23.95 3.197c-.05-.005-.1-.005-.15-.005H.20c-.05 0-.1 0-.15.005zm0 17.553L6.96 14.04l5.04 4.09 5.04-4.09 6.91 6.709c-.05.005-.1.005-.15.005H.20c-.05 0-.1 0-.15-.005z"/></svg>
+                    Email Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 px-4 md:px-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with ❤️ and Tailwind CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
