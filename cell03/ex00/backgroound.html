@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="backgroound.css">
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and rounded corners */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        button {
+            border-radius: 0.5rem; /* Apply rounded corners to the button */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 transition-colors duration-500">
+    <div class="p-6 bg-white shadow-lg rounded-lg">
+        <!-- Button to trigger the background color change -->
+        <button id="colorChangeBtn" class="px-6 py-3 bg-blue-500 text-white font-semibold text-lg rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition-all duration-300">
+            Change Background Color
+        </button>
+    </div>
+
+    <script>
+        // Get a reference to the button and the body element
+        const colorChangeBtn = document.getElementById('colorChangeBtn');
+        const body = document.body;
+
+        /**
+         * Generates a random hexadecimal color string.
+         * @returns {string} A string representing a random hex color (e.g., "#RRGGBB").
+         */
+        function getRandomColor() {
+            // Generate a random number between 0 and 16777215 (FFFFFF in hex)
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            // Pad the color string with leading zeros if necessary to ensure 6 digits
+            return "#" + randomColor.padStart(6, '0');
+        }
+
+        // Add an event listener to the button for the 'click' event
+        colorChangeBtn.addEventListener('click', () => {
+            // When the button is clicked, change the body's background color
+            body.style.backgroundColor = getRandomColor();
+        });
+
+        // Set an initial random background color when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+</body>
+</html>
